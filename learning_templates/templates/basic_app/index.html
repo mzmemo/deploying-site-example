@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'basic_app/base.html' %}
+{% load my_filter_module %}
+    {% block title %}
+        <title>Index</title>
+    {% endblock  %}
+
+    {% block content %}
+        <h1>You are on the INDEX PAGE!</h1>
+        <hr>
+        {{text|cut_tag:'to'}}
+        {{number|add:'85'}}
+        {{my_date|date}}
+    {% endblock %}
